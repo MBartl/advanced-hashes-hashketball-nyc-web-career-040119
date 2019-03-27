@@ -80,11 +80,7 @@ def find_players
 end
 
 def find_player(player)
-  find_players.select do |name|
-    if name.to_s == player
-      return name
-    end
-  end
+  find_players
 end
 
 find_player("Brendan Haywood")
