@@ -76,7 +76,7 @@ end
 #Returns all players
 def all_players
   game_hash.each do |location, team_data|
-    team_data[:players].map
+    team_data[:players].map {|names| names}
   end
 end
 
