@@ -86,7 +86,7 @@ end
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
-  return find_player(player) {|name, stats| stats[:points]}
+  return find_player(player) {|name| name[:points]}
 end
 num_points_scored("Brendan Haywood")
 
