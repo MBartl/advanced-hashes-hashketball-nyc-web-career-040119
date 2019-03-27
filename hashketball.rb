@@ -1,5 +1,4 @@
 #main hash
-require 'pry'
 def game_hash
   game_hash = 
   {
@@ -74,16 +73,10 @@ def game_hash
 end
 
 #Returns a specific player
-def find_players
-  game_hash.map do |location, team_data|
-    team_data[:players].select {|names| names}
-  end
-end
-
 def find_a_player(player)
-  find_players.each do |name|
-    binding.pry
-    return name
+  game_hash.map do |location, team_data, stats|
+    return stats
+    team_data[:players].select {|name| name.to_s == player}
   end
 end
 
@@ -113,10 +106,9 @@ end
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
-  return find_a_player(player).select {|name| name[:points]}
+  return find_player(player)[:points]
 end
 
-num_points_scored("Brendan Haywood")
 
 
 #Method No. 2: Player Shoe Size
