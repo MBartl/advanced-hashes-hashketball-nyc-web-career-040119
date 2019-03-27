@@ -76,14 +76,12 @@ end
 def find_player(player)
   players.select {|name, stats| name.to_s == player}
 end
-find_player("Brendan Haywood")
 
 
 #Returns all players
 def players
   game_hash[:home][:players].merge(game_hash[:away][:players])
 end
-players
 
 
 #Method No. 1: Number of Points Scored by Player
