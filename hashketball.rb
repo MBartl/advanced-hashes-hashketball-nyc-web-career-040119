@@ -80,8 +80,8 @@ def find_players
 end
 
 def find_a_player(player)
-  find_players.each do
-    return stats
+  find_players.each do |name|
+    return name
   end
 end
 
