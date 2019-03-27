@@ -77,6 +77,7 @@ def find_a_player(player)
   game_hash.map do |location, team_data|
     team_data[:players].map do |name|
       name.map
+    end
   end
 end
 find_a_player('Brendan Haywood')
