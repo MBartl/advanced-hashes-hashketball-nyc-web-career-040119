@@ -84,11 +84,9 @@ def find_player(player)
 end
 
 #Returns all players
-def all_players
-  output = []
-  game_hash.each do |location, team_data|
-    team_data[:players].each do |player|
-      output << player
+def home_players
+  game_hash[:home].map do |team_data|
+    return team_data
     end
   end
   return output
