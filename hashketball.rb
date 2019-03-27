@@ -72,21 +72,6 @@ def game_hash
   return game_hash
 end
 
-def find_teams
-  game_hash.map do |location, team_data|
-    team_data[:players].map {|players, stats| players}
-  end
-end
-teams
-
-def find_a_player
-  find_players.map do |team|
-    team.each do |players|
-      return players
-    end
-  end
-end
-
 #Returns a specific player
 def find_player(player)
   game_hash.each do |location, team_data|
@@ -100,15 +85,14 @@ end
 
 #Returns all players
 def all_players
-  game_hash.map do |location, team_data|
-    team_data[:players].select |players|
+  output = []
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player|
+      output << player
+    end
   end
+  return output
 end
-
-def points_scored_by_player
-  all_players[0]
-end
-points_scored_by_player
 
 
 #Method No. 1: Number of Points Scored by Player
