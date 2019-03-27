@@ -75,7 +75,7 @@ end
 #Returns a specific player faster
 def find_a_player(player)
   game_hash.map do |location, team_data|
-    team_data[:players].map do |name|
+    team_data[:players].map {|name| name}
       name.select
     end
   end
