@@ -80,9 +80,9 @@ def find_players
 end
 
 def find_player(player)
-  find_players.select do |name, stats|
+  find_players.select do |name|
     if name.to_s == player
-      return stats
+      return name
     end
   end
 end
