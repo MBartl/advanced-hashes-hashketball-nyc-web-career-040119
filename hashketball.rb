@@ -76,7 +76,7 @@ end
 def find_a_player(player)
   game_hash.map do |location, team_data|
     output = team_data[:players].select {|name| name.to_s == player}
-    return output.last
+    return output
   end
 end
 find_a_player('Brendan Haywood')
