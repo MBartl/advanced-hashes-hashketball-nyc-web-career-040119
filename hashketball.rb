@@ -77,6 +77,7 @@ def find_players
     team_data[:players].select {|players| players}
   end
 end
+find_players
 
 def find_a_player
   find_players.map do |team|
