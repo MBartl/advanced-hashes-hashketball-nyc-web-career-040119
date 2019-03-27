@@ -79,9 +79,6 @@ def find_a_player(player)
   end
 end
 
-find_a_player('Brendan Haywood')
-
-return find_a_player.last
 
 #Returns a specific player
 def find_player(player)
