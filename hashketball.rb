@@ -99,13 +99,9 @@ end
 
 #Returns all players
 def all_players
-  output = []
   game_hash.each do |location, team_data|
-    team_data[:players].each do |player|
-      output << player
-    end
+    team_data[:players].map
   end
-  return output
 end
 
 
