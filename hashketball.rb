@@ -143,7 +143,7 @@ end
 
 #Method No. 6: Player's Stat Hash
 def player_stats(player)
-  find_player(player).map {|name, stats| stats}
+  find_player(player)
 end
 
 
