@@ -72,28 +72,47 @@ def game_hash
   return game_hash
 end
 
-#Method No. 1: Number of Points Scored by Player
-def num_points_scored(player)
+#Returns a specific player
+def find_a_player(player)
+  game_hash.map do |location, team_data|
+    team_data[:players].select {|name| name.to_s == player}
+  end
+end
+
+find_player("Brendan Haywood")
+
+def find_player(player)
   game_hash.each do |location, team_data|
     team_data[:players].each do |name, stats|
       if name.to_s == player
-        return stats[:points]
+        return stats
       end
     end
   end
+end
+
+#Returns all players
+def all_players
+  output = []
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player|
+      output << player
+    end
+  end
+  return output
+end
+
+
+#Method No. 1: Number of Points Scored by Player
+def num_points_scored(player)
+  return find_player(player)[:points]
 end
 
 
 
 #Method No. 2: Player Shoe Size
 def shoe_size(player)
-  game_hash.each do |location, team_data|
-    team_data[:players].each do |name, stats|
-      if name.to_s == player
-        return stats[:shoe]
-      end
-    end
-  end
+  return find_player(player)[:shoe]
 end
 
 
@@ -137,13 +156,7 @@ end
 
 #Method No. 6: Player's Stat Hash
 def player_stats(player)
-  game_hash.each do |location, team_data|
-    team_data[:players].each do |name, stats|
-      if name.to_s == player
-        return stats
-      end
-    end
-  end
+  return find_player(player)
 end
 
 
