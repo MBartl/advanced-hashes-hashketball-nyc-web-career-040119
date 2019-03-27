@@ -74,7 +74,7 @@ end
 
 #Returns a specific player
 def find_player(player)
-  players.select {|names, stats| name == player}
+  players.select {|name, stats| name == player}
 end
 find_player("Brendan Haywood")
 
