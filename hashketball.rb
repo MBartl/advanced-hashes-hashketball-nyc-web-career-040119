@@ -82,6 +82,7 @@ end
 
 def find_a_player(player)
   find_players.each do |name|
+    binding.pry
     return name
   end
 end
