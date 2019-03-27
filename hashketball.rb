@@ -86,8 +86,9 @@ end
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
-  return find_player(player)[:points]
+  find_player(player)[:points]
 end
+num_points_scored
 
 
 
