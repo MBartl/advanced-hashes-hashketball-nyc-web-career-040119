@@ -143,7 +143,9 @@ end
 
 #Method No. 6: Player's Stat Hash
 def player_stats(player)
-  find_player(player)
+  find_player(player) do |name, stats|
+    return stats
+  end
 end
 
 
