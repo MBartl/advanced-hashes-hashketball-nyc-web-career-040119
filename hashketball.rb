@@ -79,8 +79,10 @@ def find_players
   end
 end
 
-find_players.each do |name, stats|
-  return stats
+def stats
+  find_players.each do |name, stats|
+    return stats
+  end
 end
 
 def find_player(player)
