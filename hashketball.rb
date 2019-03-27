@@ -74,7 +74,7 @@ end
 
 def find_players
   game_hash.map do |location, team_data|
-    team_data[:players].map {|players, stats| player.to_s}
+    team_data[:players].map {|players, stats| players.to_s}
   end
 end
 find_players
