@@ -97,7 +97,9 @@ end
 
 #Method No. 2: Player Shoe Size
 def shoe_size(player)
-  return find_player(player)[:shoe]
+  find_player(player).map do |name, stats|
+    return stats[:shoe]
+  end
 end
 
 
