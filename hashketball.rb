@@ -72,6 +72,7 @@ def game_hash
   return game_hash
 end
 
+
 #Returns a specific player
 def find_player(player)
   players.select {|name, stats| name.to_s == player}
