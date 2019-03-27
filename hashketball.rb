@@ -80,7 +80,7 @@ def find_players
 end
 
 def find_player(player)
-  find_players.select {|name| name.to_s == player}
+  find_players.select {|name, stats| name.to_s == player}
 end
 
 find_player("Brendan Haywood")
