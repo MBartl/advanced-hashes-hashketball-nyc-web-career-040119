@@ -72,12 +72,26 @@ def game_hash
   return game_hash
 end
 
+#Returns a specific player
+def find_player(player)
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |name, stats|
+      if name.to_s == player
+        return stats
+      end
+    end
+  end
+end
 
 #Returns all players
 def all_players
+  output = []
   game_hash.each do |location, team_data|
-    team_data[:players].map {|names| names}
+    team_data[:players].each do |player|
+      output << player
+    end
   end
+  return output
 end
 
 
