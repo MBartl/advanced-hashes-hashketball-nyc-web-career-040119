@@ -82,7 +82,7 @@ end
 def stats
   find_players.map do |team|
     team.each do |players|
-      return player
+      return players
     end
   end
 end
