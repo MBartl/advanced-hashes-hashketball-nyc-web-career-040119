@@ -83,7 +83,7 @@ def find_player(player)
   end
 end
 
-#Returns all home team players
+#Returns all team players
 def players
   game_hash[:home][:players].merge(game_hash[:away][:players])
 end
