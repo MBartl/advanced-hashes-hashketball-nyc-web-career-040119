@@ -105,9 +105,10 @@ end
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
-  return find_player(player)[:points]
+  return find_player(player).select {|stats| stats}
 end
 
+num_points_scored("Brendan Haywood")
 
 
 #Method No. 2: Player Shoe Size
