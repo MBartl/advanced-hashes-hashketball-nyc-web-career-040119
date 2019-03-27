@@ -87,7 +87,7 @@ end
 def home_players
   game_hash[:home][:players].select {|names| names}
 end
-home_players
+
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
