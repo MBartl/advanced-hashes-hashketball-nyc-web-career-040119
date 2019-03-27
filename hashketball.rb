@@ -78,7 +78,7 @@ def find_a_player(player)
     team_data[:players].select {|name, stats| stats}
   end
 end
-find_a_player(a)
+find_a_player('a')
 
 #Returns a specific player
 def find_player(player)
