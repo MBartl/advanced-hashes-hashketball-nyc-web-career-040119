@@ -104,6 +104,12 @@ def all_players
   end
 end
 
+def points_scored_by_player
+  all_players.each do |name, stats|
+    return stats
+  end
+end
+
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
