@@ -85,7 +85,7 @@ end
 
 #Returns all home team players
 def home_players
-  game_hash[:home].select {|team_data, stats| team_data[:players]}
+  game_hash[:home][:players].select {|names| names}
 end
 home_players
 
