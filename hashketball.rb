@@ -100,7 +100,7 @@ end
 #Returns all players
 def all_players
   game_hash.map do |location, team_data|
-    team_data[:players].select {|players| players}
+    team_data[:players].select |players|
   end
 end
 
