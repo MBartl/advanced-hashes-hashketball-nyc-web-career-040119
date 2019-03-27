@@ -80,8 +80,10 @@ def find_players
 end
 
 def find_player(player)
-  find_players.map do |name|
-    return name
+  find_players.select do |name, stats|
+    if name.to_s == player
+      return stats
+    end
   end
 end
 
