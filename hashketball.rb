@@ -72,12 +72,12 @@ def game_hash
   return game_hash
 end
 
-def find_players
+def find_teams
   game_hash.map do |location, team_data|
-    team_data[:players].map {|players, stats| stats.to_s}
+    team_data[:players].map {|players, stats| players}
   end
 end
-find_players
+teams
 
 def find_a_player
   find_players.map do |team|
