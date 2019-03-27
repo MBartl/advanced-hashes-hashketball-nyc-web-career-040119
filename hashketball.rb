@@ -76,6 +76,7 @@ end
 def find_a_player(player)
   game_hash.reduce do |location, team_data|
     team_data[:players][player].fetch
+  end
 end
 find_a_player('Brendan Haywood')
 
