@@ -89,7 +89,6 @@ def home_players
     return team_data
     end
   end
-  return output
 end
 
 
