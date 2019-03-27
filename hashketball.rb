@@ -85,10 +85,7 @@ end
 
 #Returns all home team players
 def home_players
-  game_hash[:home].map do |team_data|
-    return team_data
-    end
-  end
+  game_hash[:home].map do {|team_data, info| team_data == :players}
 end
 home_players
 
