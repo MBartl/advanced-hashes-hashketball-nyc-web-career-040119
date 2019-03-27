@@ -105,8 +105,8 @@ def all_players
 end
 
 def points_scored_by_player
-  all_players.each do |name, stats|
-    return stats
+  all_players.each do |name|
+    return name
   end
 end
 
