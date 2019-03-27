@@ -90,7 +90,7 @@ def home_players
     end
   end
 end
-
+home_players
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
