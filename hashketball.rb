@@ -75,11 +75,17 @@ end
 #Returns a specific player
 def find_players
   game_hash.map do |location, team_data|
-    team_data[:players].select {|name, numbers, stats| stats}
+    team_data[:players].select {|names| names}
   end
 end
 
-find_players
+def find_player(player)
+  find_players.map do |name, stats|
+    stats.each.select
+  end
+end
+
+find_player("Brendan Haywood")
 
 def find_player(player)
   game_hash.each do |location, team_data|
