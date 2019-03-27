@@ -79,7 +79,7 @@ def find_a_player(player)
   end
 end
 
-find_player("Brendan Haywood")
+find_a_player("Brendan Haywood")
 
 def find_player(player)
   game_hash.each do |location, team_data|
