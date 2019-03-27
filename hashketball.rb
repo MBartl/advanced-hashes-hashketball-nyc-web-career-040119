@@ -79,8 +79,8 @@ def find_players
   end
 end
 
-def find_player(player)
-  find_players.select {|name, stats| name.to_s == player}
+def find_a_player(player)
+  return find_players[player]
 end
 
 find_player("Brendan Haywood")
