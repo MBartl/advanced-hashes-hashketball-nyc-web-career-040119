@@ -74,7 +74,8 @@ end
 
 #Returns a specific player faster
 def find_a_player(player)
-  game_hash.each.fetch(player)
+  game_hash.reduce do |location, team_data|
+    team_data[:players][player].fetch
 end
 find_a_player('Brendan Haywood')
 
