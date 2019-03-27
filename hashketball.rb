@@ -76,7 +76,7 @@ end
 def find_a_player(player)
   game_hash.fetch(player)
 end
-find_a_player('Brendan Haywood').last
+find_a_player('Brendan Haywood')
 
 return find_a_player.last
 
