@@ -75,7 +75,7 @@ end
 #Returns a specific player
 def find_a_player(player)
   game_hash.map do |location, team_data|
-    team_data[:players].select {|name, stats| stats[:points]}
+    team_data[:players].select {|name| name[:points]}
   end
 end
 
