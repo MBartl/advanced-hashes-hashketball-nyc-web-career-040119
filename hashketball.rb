@@ -109,6 +109,7 @@ def points_scored_by_player
     return name
   end
 end
+points_scored_by_player
 
 
 #Method No. 1: Number of Points Scored by Player
