@@ -76,7 +76,7 @@ end
 def find_a_player(player)
   game_hash.map do |location, team_data|
     team_data[:players].map do |name, stats|
-      if name.to_s == players
+      if name.to_s == player
         return stats
       end
     end
