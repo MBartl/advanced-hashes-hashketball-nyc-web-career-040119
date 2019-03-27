@@ -83,7 +83,7 @@ def find_player(player)
   end
 end
 
-#Returns all players
+#Returns all home team players
 def home_players
   game_hash[:home].map do |team_data|
     return team_data
