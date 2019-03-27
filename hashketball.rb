@@ -72,13 +72,6 @@ def game_hash
   return game_hash
 end
 
-#Returns a specific player faster
-def find_a_player(player)
-  game_hash.map do |location, team_data|
-    team_data[:players].select {|name, stats| name.to_s == player}
-  end
-end
-
 
 #Returns a specific player
 def find_player(player)
