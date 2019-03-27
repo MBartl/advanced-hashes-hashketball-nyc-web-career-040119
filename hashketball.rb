@@ -86,7 +86,9 @@ end
 
 #Method No. 1: Number of Points Scored by Player
 def num_points_scored(player)
-  find_player(player).fetch(player[:points])
+  find_player(player).map do |name, stats|
+    return stats[:points]
+  end
 end
 num_points_scored("Brendan Haywood")
 
