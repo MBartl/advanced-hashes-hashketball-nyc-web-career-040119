@@ -78,6 +78,7 @@ def find_a_player(player)
     team_data[:players].select {|name, stats| name.to_s == player}
   end
 end
+
 find_a_player('Brendan Haywood')
 
 return find_a_player.last
