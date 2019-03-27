@@ -80,7 +80,7 @@ def find_players
 end
 
 def find_player(player)
-  find_players
+  return find_players
 end
 
 find_player("Brendan Haywood")
