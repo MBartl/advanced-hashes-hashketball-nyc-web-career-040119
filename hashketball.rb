@@ -74,7 +74,7 @@ end
 
 #Returns a specific player faster
 def find_a_player(player)
-  game_hash.fetch(player)
+  game_hash.each.fetch(player)
 end
 find_a_player('Brendan Haywood')
 
